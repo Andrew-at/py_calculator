@@ -5,8 +5,8 @@
 import math
 
 calc_display = '''
-
 Welcome to my calculator!
+
  =======================
   _____________________
  |  _________________  |
@@ -27,42 +27,71 @@ Welcome to my calculator!
 '''
 
 operation_display = '''
-Please Choose from the following operations:
+Please select an operation:
 1. Add
 2. Subtract
 3. Multiply
 4. Divide
 5. Square Root
-6. Prime Number
+6. Even or Odd
 7. Quit
 '''
-
 print(calc_display)
 print(operation_display)
 
-operation_select = (input("Please select an operation: "))
-
-if operation_select == 1:
+def addition():
     number1 = int(input("Please enter the first number: "))
     number2 = int(input("Please enter the second number: "))
     print(number1 + number2)
 
-elif operation_select == 2:
+def subtraction():
     number1 = int(input("Please enter the first number: "))
     number2 = int(input("Please enter the second number: "))
     print(number1 - number2)
 
-elif operation_select == 3:
+def multiply():
     number1 = int(input("Please enter the first number: "))
     number2 = int(input("Please enter the second number: "))
     print(number1 * number2)
 
-elif operation_select == 4:
+def divide():
     number1 = int(input("Please enter the first number: "))
     number2 = int(input("Please enter the second number: "))
     print(number1 / number2)
-    
-elif operation_select == 5:
-    number1 = int(input("Enter an integer to find the square root:"))
-    print(sqrt(number1))
 
+def sqrt():
+    number1 = int(input("Enter a number to find the square root: "))
+    print(math.sqrt(number1))
+
+def evenOdd():
+    number1 = int(input("Enter a number to find if it is even or odd: "))
+    if number1 % 2 == 0:
+        print(f"{number1} is even.")
+    else:
+        print(f"{number1} is odd")
+
+operation_select = int
+while operation_select != 7:
+    operation_select = int(input(">: "))
+
+    if operation_select == 1:
+        addition()
+        continue
+
+    elif operation_select == 2:
+        subtraction()
+        continue
+    
+    elif operation_select == 3:
+        multiply()
+        continue
+    
+    elif operation_select == 4:
+        divide()
+        continue
+
+    elif operation_select == 5:
+        sqrt()
+    
+    elif operation_select == 6:
+        evenOdd()
