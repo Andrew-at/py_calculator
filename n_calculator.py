@@ -1,67 +1,67 @@
-#Lloyd Higgins
-#2023
-#basic python calculator
+# Lloyd Higgins
+# 2023
+# basic python console calculator
 
 import math
+from pathlib import Path
 
-calc_display = '''
-Welcome to my calculator!
+txt_path1 = Path('calc_display.txt')
+calc_display = txt_path1.read_text()
 
- =======================
-  _____________________
- |  _________________  |
- | |              0. | |
- | |_________________| |
- |  ___ ___ ___   ___  |
- | | 7 | 8 | 9 | | + | |
- | |___|___|___| |___| |
- | | 4 | 5 | 6 | | - | |
- | |___|___|___| |___| |
- | | 1 | 2 | 3 | | x | |
- | |___|___|___| |___| |
- | | . | 0 | = | | / | |
- | |___|___|___| |___| |
- |_____________________|
+txt_path2 = Path("operation_display.txt")
+operation_display = txt_path2.read_text()
 
- =======================
-'''
+def input_select():
+    operation_select = int
+    active = True
+    while active:
+        print(operation_display)
+        try:
+            operation_select = int(input(">: "))
+        except ValueError:
+            print("Error, unknown value")
 
-operation_display = '''
-Please select an operation:
-1. Add
-2. Subtract
-3. Multiply
-4. Divide
-5. Square Root
-6. Even or Odd
-7. Quit
-'''
-print(calc_display)
-print(operation_display)
+        if operation_select == 1:
+            addition()
+
+        elif operation_select == 2:
+            subtraction()
+
+        elif operation_select == 3:
+            multiply()
+
+        elif operation_select == 4:
+            divide()
+
+        elif operation_select == 5:
+            sqrt()
+
+        elif operation_select == 7:
+            active = False
 
 def addition():
     number1 = int(input("Please enter the first number: "))
     number2 = int(input("Please enter the second number: "))
-    print(number1 + number2)
+    print(":", number1 + number2)
 
 def subtraction():
     number1 = int(input("Please enter the first number: "))
     number2 = int(input("Please enter the second number: "))
-    print(number1 - number2)
+    print(":", number1 - number2)
 
 def multiply():
     number1 = int(input("Please enter the first number: "))
     number2 = int(input("Please enter the second number: "))
-    print(number1 * number2)
+    print(":", number1 * number2)
 
 def divide():
     number1 = int(input("Please enter the first number: "))
     number2 = int(input("Please enter the second number: "))
-    print(number1 / number2)
+    print(":", number1 / number2)
 
 def sqrt():
     number1 = int(input("Enter a number to find the square root: "))
-    print(math.sqrt(number1))
+    print(":", math.sqrt(number1))
 
 def evenOdd():
     number1 = int(input("Enter a number to find if it is even or odd: "))
@@ -70,28 +70,5 @@ def evenOdd():
     else:
         print(f"{number1} is odd")
 
-operation_select = int
-while operation_select != 7:
-    operation_select = int(input(">: "))
-
-    if operation_select == 1:
-        addition()
-        continue
-
-    elif operation_select == 2:
-        subtraction()
-        continue
-    
-    elif operation_select == 3:
-        multiply()
-        continue
-    
-    elif operation_select == 4:
-        divide()
-        continue
-
-    elif operation_select == 5:
-        sqrt()
-    
-    elif operation_select == 6:
-        evenOdd()
+print(calc_display)
+input_select()
