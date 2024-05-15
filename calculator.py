@@ -1,4 +1,4 @@
-# Lloyd Higgins
+# Andrew-at
 # 2023
 # basic python console calculator
 
