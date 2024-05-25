@@ -39,6 +39,8 @@ def input_select():
         elif operation_select == 7:
             active = False
 
+# add comments for everything/descriptions
+
 def addition():
     number1 = int(input("Please enter the first number: "))
     number2 = int(input("Please enter the second number: "))
