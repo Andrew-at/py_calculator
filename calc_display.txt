@@ -1,4 +1,4 @@
-Welcome to my calculator!
+Welcome to the console calculator!
 
  =======================
   _____________________
