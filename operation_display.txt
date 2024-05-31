@@ -1,0 +1,8 @@
+Please select an operation:
+1. Add
+2. Subtract
+3. Multiply
+4. Divide
+5. Square Root
+6. Even or Odd
+7. Quit
