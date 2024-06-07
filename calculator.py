@@ -5,11 +5,14 @@
 import math
 from pathlib import Path
 
+# displays the a calculator ascii graphic
 txt_path1 = Path('calc_display.txt')
 calc_display = txt_path1.read_text()
 
+# displays operations in console via .txt file
 txt_path2 = Path("operation_display.txt")
 operation_display = txt_path2.read_text()
+
 
 # operation select for calculator
 def input_select():
@@ -28,10 +31,12 @@ def input_select():
             addition()
 
 
-# functions for two integers
+# functions for adding multiple integers
+# 0 input = 0
 # addition
 def addition():
 
+    num_list = []
     while True:
 
         try:
@@ -43,19 +48,20 @@ def addition():
     for i in range(num_range):
         while True:
             try:
-                num2 = int(input("select a number: "))
+                num = int(input("select a number: "))
+                num_list.append(num)
                 break
             except ValueError:
                 print("Error: unknown value")
 
-    print(num2 + num2)
+    print(sum(num_list))
 
 # subtract
 def subtract():
     while True:
         try:
-            num1 = int(input("Enter the first number: "))
-            num2 = int(input("Enter the second number: "))
+            num1 = int(input("Enter a number: "))
+            num2 = int(input("Enter a number to subtract by: "))
             break
         except ValueError:
             print("Error: unknown value")
