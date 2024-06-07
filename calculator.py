@@ -13,7 +13,6 @@ calc_display = txt_path1.read_text()
 txt_path2 = Path("operation_display.txt")
 operation_display = txt_path2.read_text()
 
-
 # operation select for calculator
 def input_select():
 
@@ -29,7 +28,10 @@ def input_select():
 
         if operation_select == 1:
             addition()
-
+        elif operation_select == 2:
+            subtract()
+        elif operation_select == 7:
+            break
 
 # functions for adding multiple integers
 # 0 input = 0
