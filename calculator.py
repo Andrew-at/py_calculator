@@ -11,6 +11,7 @@ calc_display = txt_path1.read_text()
 txt_path2 = Path("operation_display.txt")
 operation_display = txt_path2.read_text()
 
+# operation select for calculator
 def input_select():
 
     operation_select = int
@@ -34,14 +35,20 @@ def addition():
     while True:
 
         try:
-            num1 = int(input("Enter the first number: "))
-            num2 = int(input("Enter the second number: "))
+            num_range = int(input("How many numbers do you want to add? "))
             break
         except ValueError:
             print("Error: unknown value")
 
-    print(":", num1 + num2)
+    for i in range(num_range):
+        while True:
+            try:
+                num2 = int(input("select a number: "))
+                break
+            except ValueError:
+                print("Error: unknown value")
 
+    print(num2 + num2)
 
 # subtract
 def subtract():
@@ -54,13 +61,14 @@ def subtract():
             print("Error: unknown value")
     print(":", num1 - num2)
 
-"""
+
 # multiply
 def multiply():
-    number1 = int(input("Please enter the first number: "))
-    number2 = int(input("Please enter the second number: "))
+    number1 = int(input("Choose a number to multiply: "))
+    number2 = int(input("Enter number of times to multiply: "))
     print(":", number1 * number2)
 
+"""
 # divide
 def divide():
     number1 = int(input("Please enter the first number: "))
