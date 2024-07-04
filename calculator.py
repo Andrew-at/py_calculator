@@ -6,12 +6,13 @@
 This is a side project using some
 beginner python fundamentals (loops, error checking, ect.)
 to build a calculator that uses a terminal window.
+The ultimate goal is to recreate some math functions from the Python
+math library without using anything from the library itself.
 """
 
-import math
 from pathlib import Path
 
-# displays the a calculator ascii graphic
+# displays a calculator ascii graphic
 txt_path1 = Path('calc_display.txt')
 calc_display = txt_path1.read_text()
 
@@ -44,15 +45,16 @@ def input_select():
             sqrt()
         elif operation_select == 6:
             even_odd()
-        elif operation_select == 7:
-            break
+        elif operation_select == 0:
+            active = False
 
+# 1:
 # functions for adding multiple integers
-# 0 input = 0
-# 1: addition
 def addition():
 
     num_list = []
+    sum_total = 0
+
     while True:
 
         try:
@@ -70,10 +72,15 @@ def addition():
             except ValueError:
                 print("Error: unknown value")
 
-    print(sum(num_list))
+    for i in num_list:
+        sum_total += i
 
-# 2: subtract
+    print(sum_total)
+
+# 2:
+# function for subtracting int by another int
 def subtract():
+
     while True:
         try:
             num1 = int(input("Enter a number: "))
@@ -81,6 +88,7 @@ def subtract():
             break
         except ValueError:
             print("Error: unknown value")
+
     print(":", num1 - num2)
 
 # 3: multiply
