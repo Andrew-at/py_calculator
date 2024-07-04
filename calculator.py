@@ -2,6 +2,12 @@
 # 2023
 # basic python console calculator
 
+"""
+This is a side project using some
+beginner python fundamentals (loops, error checking, ect.)
+to build a calculator that uses a terminal window.
+"""
+
 import math
 from pathlib import Path
 
@@ -44,7 +50,6 @@ def input_select():
 # functions for adding multiple integers
 # 0 input = 0
 # 1: addition
-# a test
 def addition():
 
     num_list = []
