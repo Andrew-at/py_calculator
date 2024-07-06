@@ -20,6 +20,7 @@ calc_display = txt_path1.read_text()
 txt_path2 = Path("operation_display.txt")
 operation_display = txt_path2.read_text()
 
+
 # operation select for calculator
 def input_select():
 
@@ -47,6 +48,7 @@ def input_select():
             even_odd()
         elif operation_select == 0:
             active = False
+
 
 # 1:
 # functions for adding multiple integers
@@ -77,6 +79,7 @@ def addition():
 
     print(sum_total)
 
+
 # 2:
 # function for subtracting int by another int
 def subtract():
@@ -96,11 +99,25 @@ def subtract():
 
     print(":", num1 - num2)
 
+
 # 3: multiply
 def multiply():
-    number1 = int(input("Choose a number to multiply: "))
-    number2 = int(input("Enter number of times to multiply: "))
-    print(":", number1 * number2)
+
+    while True:
+        try:
+            num1 = int(input("Enter a number: "))
+            break
+        except ValueError:
+            print("Error: unknown value")
+    while True:
+        try:
+            num2 = int(input("Enter number to multiply by: "))
+            break
+        except ValueError:
+            print("Error: unknown value")
+
+    print(":", num1 * num2)
+
 
 # 4: divide
 def divide():
