@@ -84,6 +84,11 @@ def subtract():
     while True:
         try:
             num1 = int(input("Enter a number: "))
+            break
+        except ValueError:
+            print("Error: unknown value")
+    while True:
+        try:
             num2 = int(input("Enter a number to subtract by: "))
             break
         except ValueError:
