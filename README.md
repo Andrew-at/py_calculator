@@ -1,5 +1,5 @@
-This is just a simple calculator I built in python, it started as something to get familiar with Python syntax.
-Over time I would like to add more interesting functions to it:
-A square root function without using the builtin python sqrt function.
-A sequence function that generates a fibonacci sequence of integers from start and end values.
-A Pythagoras function, may just stick with hypotenuse but add other sides over time.
+This is a side project using some
+beginner python fundamentals (loops, error checking, ect.)
+to build a calculator that uses a terminal window.
+The ultimate goal is to recreate some math functions from the Python
+math library without using anything from the library itself.
