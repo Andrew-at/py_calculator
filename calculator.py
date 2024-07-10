@@ -121,9 +121,19 @@ def multiply():
 
 # 4: divide
 def divide():
-    number1 = int(input("Please enter the first number: "))
-    number2 = int(input("Please enter the second number: "))
-    print(":", number1 / number2)
+    while True:
+        try:
+            num1 = int(input("Enter a number: "))
+            break
+        except ValueError:
+            print("Error: unknown value")
+    while True:
+        try:
+            num2 = int(input("Enter number to multiply by: "))
+            break
+        except ValueError:
+            print("Error: unknown value")
+    print(":", num1 / num2)
 
 # 5: sqrt
 def sqrt():
