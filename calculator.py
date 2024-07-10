@@ -4,13 +4,14 @@
 
 """
 This is a side project using some
-beginner python fundamentals (loops, error checking, ect.)
+beginner Python fundamentals (loops, error checking, ect.)
 to build a calculator that uses a terminal window.
 The ultimate goal is to recreate some math functions from the Python
 math library without using anything from the library itself.
 """
 
 from pathlib import Path
+from square_root import *
 
 # displays a calculator ascii graphic
 txt_path1 = Path('calc_display.txt')
@@ -42,6 +43,8 @@ def input_select():
             multiply()
         elif operation_select == 4:
             divide()
+        elif operation_select == 5:
+            square_root()
         elif operation_select == 0:
             active = False
 
@@ -138,11 +141,7 @@ def divide():
     else:
         print(":", num1 / num2)
 
-# 5: sqrt
 """
-def sqrt():
-    number1 = int(input("Enter a number to find the square root: "))
-    print(":", math.sqrt(number1))
 
 # 6: even/odd comparison
 def even_odd():
