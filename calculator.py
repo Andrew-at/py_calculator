@@ -141,16 +141,5 @@ def divide():
     else:
         print(":", num1 / num2)
 
-"""
-
-# 6: even/odd comparison
-def even_odd():
-    number1 = int(input("Enter a number to find if it is even or odd: "))
-    if number1 % 2 == 0:
-        print(f"{number1} is even.")
-    else:
-        print(f"{number1} is odd")
-"""
-
 print(calc_display)
 input_select()
