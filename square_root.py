@@ -3,10 +3,9 @@
 # function for calculating square root of an int
 
 """
-building the sqrt function from scratch without using Python
-math library.
+building the sqrt function from scratch without using 
+the Python math library.
 """
-
 
 def square_root():
 
