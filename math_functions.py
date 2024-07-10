@@ -17,5 +17,5 @@ def square_root():
         except ValueError:
             print("Error: unknown value")
 
-    if num1 * num1 == num1:
-        print(num1)
+    sqrt = num1 ** (1/2)
+    print(sqrt)

@@ -11,7 +11,7 @@ math library without using anything from the library itself.
 """
 
 from pathlib import Path
-from square_root import *
+from math_functions import *
 
 # displays a calculator ascii graphic
 txt_path1 = Path('calc_display.txt')
