@@ -100,7 +100,7 @@ def divide():
         print(":", num1 / num2)
 
 
-# Square root
+# 5: Square root
 def square_root():
 
     while True:
