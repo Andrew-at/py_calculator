@@ -5,4 +5,3 @@ Please select an operation:
 3. Multiply
 4. Divide
 5. Square Root
-6. Even or Odd
