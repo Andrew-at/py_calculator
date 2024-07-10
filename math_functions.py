@@ -6,6 +6,7 @@
 math functions for the calculator file.
 """
 
+
 # 1:
 # Addition of multiple integers
 def addition():
@@ -98,6 +99,8 @@ def divide():
     else:
         print(":", num1 / num2)
 
+
+# Square root
 def square_root():
 
     while True:
