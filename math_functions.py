@@ -7,8 +7,7 @@ math functions for the calculator file.
 """
 
 
-# 1:
-# Addition of multiple integers
+# 1: Addition of multiple integers
 def addition():
 
     num_list = []
