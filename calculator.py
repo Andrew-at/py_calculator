@@ -21,7 +21,7 @@ txt_path2 = Path("operation_display.txt")
 operation_display = txt_path2.read_text()
 
 
-# operation select for calculator
+# operation select
 def input_select():
 
     operation_select = int
@@ -47,7 +47,7 @@ def input_select():
 
 
 # 1:
-# functions for adding multiple integers
+# Addition of multiple integers
 def addition():
 
     num_list = []
@@ -77,7 +77,7 @@ def addition():
 
 
 # 2:
-# function for subtracting int by another int
+# Subtraction
 def subtract():
 
     while True:
