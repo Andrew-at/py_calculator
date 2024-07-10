@@ -42,10 +42,6 @@ def input_select():
             multiply()
         elif operation_select == 4:
             divide()
-        elif operation_select == 5:
-            sqrt()
-        elif operation_select == 6:
-            even_odd()
         elif operation_select == 0:
             active = False
 
@@ -90,6 +86,7 @@ def subtract():
             break
         except ValueError:
             print("Error: unknown value")
+
     while True:
         try:
             num2 = int(input("Enter a number to subtract by: "))
@@ -109,6 +106,7 @@ def multiply():
             break
         except ValueError:
             print("Error: unknown value")
+
     while True:
         try:
             num2 = int(input("Enter number to multiply by: "))
@@ -127,15 +125,21 @@ def divide():
             break
         except ValueError:
             print("Error: unknown value")
+
     while True:
         try:
             num2 = int(input("Enter number to multiply by: "))
             break
         except ValueError:
-            print("Error: unknown value")
-    print(":", num1 / num2)
+            print("Error: unknown value.")
+
+    if num2 == 0:
+        print("Error: division by zero.")
+    else:
+        print(":", num1 / num2)
 
 # 5: sqrt
+"""
 def sqrt():
     number1 = int(input("Enter a number to find the square root: "))
     print(":", math.sqrt(number1))
@@ -147,6 +151,7 @@ def even_odd():
         print(f"{number1} is even.")
     else:
         print(f"{number1} is odd")
+"""
 
 print(calc_display)
 input_select()
