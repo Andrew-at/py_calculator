@@ -48,6 +48,6 @@ def input_select():
         elif operation_select == 0:
             active = False
 
-
+# prints the ascii display and operation select
 print(calc_display)
 input_select()
