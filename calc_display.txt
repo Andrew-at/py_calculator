@@ -1,5 +1,5 @@
-Welcome to the console calculator!
 
+Welcome to the console calculator!
  =======================
   _____________________
  |  _________________  |
@@ -15,5 +15,3 @@ Welcome to the console calculator!
  | | . | 0 | = | | / | |
  | |___|___|___| |___| |
  |_____________________|
-
- =======================
