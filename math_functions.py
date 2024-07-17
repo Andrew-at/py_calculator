@@ -111,15 +111,3 @@ def square_root():
 
     sqrt = num1 ** (1/2)
     print(sqrt)
-
-
-# 6: Even or Odd
-
-def even_odd():
-
-    while True:
-        try:
-            num1 = int(input("Enter a number: "))
-            break
-        except ValueError:
-            print("Error: unknown value")
