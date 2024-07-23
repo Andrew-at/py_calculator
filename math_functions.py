@@ -33,7 +33,7 @@ def addition():
     for i in num_list:
         sum_total += i
 
-    print(sum_total)
+    return sum_total
 
 
 # 2:
@@ -111,3 +111,19 @@ def square_root():
 
     sqrt = num1 ** (1/2)
     print(sqrt)
+
+
+# 6: Even/Odd
+def even_odd():
+
+    while True:
+        try:
+            num1 = int(input("Enter a number: "))
+            break
+        except ValueError:
+            print("Error: unknown value")
+
+    if num1 % 2 == 0:
+        print(f"{num1} is even.")
+    else:
+        print(f"{num1} is odd.")
