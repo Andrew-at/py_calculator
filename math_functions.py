@@ -127,3 +127,4 @@ def even_odd():
         print(f"{num1} is even.")
     else:
         print(f"{num1} is odd.")
+

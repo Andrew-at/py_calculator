@@ -45,6 +45,8 @@ def input_select():
             divide()
         elif operation_select == 5:
             square_root()
+        elif operation_select == 6:
+            even_odd()
         elif operation_select == 0:
             active = False
 
