@@ -21,6 +21,7 @@ calc_display = txt_path1.read_text()
 txt_path2 = Path("operation_display.txt")
 operation_display = txt_path2.read_text()
 
+
 # operation select
 def input_select():
 
@@ -44,22 +45,9 @@ def input_select():
             divide()
         elif operation_select == 5:
             square_root()
-        elif operation_select == 6:
-            even_odd()
-        elif operation_select == 7:
-            print(fibonacci(n))
         elif operation_select == 0:
             active = False
 
-def fibonacci(n):
-    if n == 0:
-        return 0
-    elif n == 1 or n == 2:
-        return 1
-    else:
-        return fibonacci(n-1) + fibonacci(n-2)
 
-print(fibonacci(9))
-
-#print(calc_display)
-#input_select()
+print(calc_display)
+input_select()
